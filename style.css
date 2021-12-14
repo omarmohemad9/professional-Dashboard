@@ -49,7 +49,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: 3;
-    background-image: linear-gradient(150deg, white, blue);
+    background-image: linear-gradient(
+180deg
+, #9993f9, #f7ecc0);
     /*-webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-100%, 0%);
     -ms-transform: translate(-100%, 0%);
@@ -80,6 +82,8 @@ body {
     padding: 5px 12px;
     border: 0;
     border-radius: 20px;
+    cursor:pointer;
+
 }
 
 .nav ol {
@@ -95,6 +99,25 @@ body {
     align-items: center;
     padding: 20px;
     font-size: 22px;
+    cursor: pointer;
+}
+
+.nav.active ol li {
+    animation-name: movefromleft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes movefromleft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 .nav ol li svg {
@@ -162,6 +185,7 @@ body.disable .left .before {
     list-style: none;
     margin-top: 55px;
     margin-bottom: 220px;
+    overflow:hidden;
 }
 
 .left ol li {
@@ -204,7 +228,7 @@ body.disable .left ol li {
     top: 58px;
     padding: 2px;
     border: 0;
-    box-shadow: 1px 0px 9px #00000061;
+   box-shadow: 5px 2px 9px #00000038;
     border-radius: 0px 5px 5px 0px;
 }
 
@@ -423,8 +447,8 @@ body.disable .containerOfGrid {
 /* .containerOfGrid .rightAndLeft .boxRL .title-box .content-title-box p {} */
 
 .containerOfGrid .rightAndLeft .boxRL .title-box .icon-box button {
-    /*padding: 1rem;
-    */
+    padding: 7px 15px 4px;
+    border-radius:50px;
     border: 0;
     cursor: pointer;
     opacity: 0.3;
@@ -660,7 +684,6 @@ body.disable .containerOfGrid {
     -o-border-radius: 15px;
     width: 180px;
     margin-top: 36px;
-    margin-left: 75px;
     /* float: center; */
 }
 
@@ -724,9 +747,9 @@ body.disable .containerOfGrid {
     right: 10px;
     background-color: white;
     padding: 1rem 2rem 1rem 1rem;
+    box-shadow: 0px 0px 35px #0000000d;
     z-index: 2;
     border-radius: 15px;
-    box-shadow: 0px 0px 35px #0000004f;
     /* user-select: none; */
 }
 
