@@ -24,8 +24,15 @@
 //     getactive.classList.add("active");
 // }
 
+let nav = document.querySelector(".left");
+let NavBtn = document.querySelector(".left .hamburger .navbar");
+
+NavBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
 let body = document.querySelector(".click");
 
-body.addEventListener("click", function() {
-    document.body.classList.toggle("disable");
+body.addEventListener("click", function () {
+  document.body.classList.toggle("disable");
 });
